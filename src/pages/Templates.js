@@ -23,7 +23,7 @@ function Templates() {
     };
     axios
       .get(
-        "https://capstone-bulk-email-tool-backend-4.onrender.com/api/v1/user/viewtemplates",
+        "https://bulk-email-tool-backend-v04p.onrender.com/api/v1/user/viewtemplates",
         config
       )
       .then((res) => {
@@ -57,7 +57,7 @@ function Templates() {
   const onHandleConfirm = () => {
     axios
       .post(
-        `https://capstone-bulk-email-tool-backend-4.onrender.com/api/v1/user/deletetemplate/${templateId}`
+        `https://bulk-email-tool-backend-v04p.onrender.com/api/v1/user/deletetemplate/${templateId}`
       )
       .then((res) => {
         console.log("successfully deleted");

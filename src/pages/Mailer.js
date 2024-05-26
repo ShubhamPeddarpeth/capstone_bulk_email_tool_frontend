@@ -25,7 +25,7 @@ function Send() {
 
     axios
       .get(
-        "https://capstone-bulk-email-tool-backend-4.onrender.com/api/v1/user/viewgroups",
+        "https://bulk-email-tool-backend-v04p.onrender.com/api/v1/user/viewgroups",
         config
       )
       .then((res) => {
@@ -43,7 +43,7 @@ function Send() {
     const messageToSend = template === "none" ? message : templateMessage;
     axios
       .post(
-        "https://capstone-bulk-email-tool-backend-4.onrender.com/api/v1/user/sendmail",
+        "https://bulk-email-tool-backend-v04p.onrender.com/api/v1/user/sendmail",
         {
           group,
           subject,

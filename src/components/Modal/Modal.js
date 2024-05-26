@@ -42,7 +42,7 @@ const GroupModal = ({ handleModal }) => {
     setIsLoading(true);
     axios
       .post(
-        `https://capstone-bulk-email-tool-backend-4.onrender.com/api/v1/user/addgroup`,
+        `https://bulk-email-tool-backend-v04p.onrender.com/api/v1/user/addgroup`,
         {
           name: name,
           emails: validEmails,

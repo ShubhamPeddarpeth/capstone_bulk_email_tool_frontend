@@ -17,7 +17,7 @@ function SentDetails() {
         };
         axios
           .get(
-            "https://capstone-bulk-email-tool-backend-4.onrender.com/api/v1/user/sentdetails",
+            "https://bulk-email-tool-backend-v04p.onrender.com/api/v1/user/sentdetails",
             config
           )
           .then((res) => {

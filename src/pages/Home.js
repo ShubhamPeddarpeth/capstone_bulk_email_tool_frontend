@@ -16,7 +16,7 @@ function Home() {
     };
     axios
       .get(
-        "https://capstone-bulk-email-tool-backend-4.onrender.com/api/v1/user/dashboard",
+        "https://bulk-email-tool-backend-v04p.onrender.com/api/v1/user/dashboard",
         config
       )
       .then((res) => {

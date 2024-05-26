@@ -10,7 +10,6 @@ function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [incorrect, setIncorrect] = useState(false);
-  const [message, setMessage] = useState("");
 
   const handleSubmit = async () => {
     try {
@@ -18,9 +17,7 @@ function Login() {
       if (res.valid === true && res.status === 200) {
         setIncorrect(false);
         navigate("/");
-      } else {
-        setMessage(res.message);
-      }
+      } 
     } catch (error) {
       if (error.response && error.response.status === 409) {
         console.log("User already exists. Please login.");
@@ -47,7 +44,6 @@ function Login() {
               <p class="sign-up__descr">Welcome, Please login your account.</p>
             </header>
             <div class="sign-up__form form">
-              {message && <div className="alert alert-info">{message}</div>}
               <div class="form__row">
                 <div class="input">
                   <div class="input__container">

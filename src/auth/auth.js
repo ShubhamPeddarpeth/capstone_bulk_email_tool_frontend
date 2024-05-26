@@ -3,15 +3,12 @@ import axios from "axios";
 export const signup = (user) => {
   const { firstName, lastName, email, password } = user;
   return axios
-    .post(
-      "https://capstone-bulk-email-tool-backend-4.onrender.com/api/v1/register",
-      {
-        firstName,
-        lastName,
-        email,
-        password,
-      }
-    )
+    .post("https://bulk-email-tool-backend-v04p.onrender.com/api/v1/register", {
+      firstName,
+      lastName,
+      email,
+      password,
+    })
     .then((res) => {
       console.log(res);
       return res;
@@ -28,13 +25,10 @@ export const signup = (user) => {
 
 export const signin = (email, password) => {
   return axios
-    .post(
-      "https://capstone-bulk-email-tool-backend-4.onrender.com/api/v1/login",
-      {
-        email,
-        password,
-      }
-    )
+    .post("https://bulk-email-tool-backend-v04p.onrender.com/api/v1/login", {
+      email,
+      password,
+    })
     .then(async (res) => {
       saveToken(res.data.token);
       return {

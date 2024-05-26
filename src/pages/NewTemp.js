@@ -20,7 +20,7 @@ function NewTemp() {
     };
     axios
       .post(
-        "https://capstone-bulk-email-tool-backend-4.onrender.com/api/v1/user/newtemplate",
+        "https://bulk-email-tool-backend-v04p.onrender.com/api/v1/user/newtemplate",
         {
           content: code,
           name: name,

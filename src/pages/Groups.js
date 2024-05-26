@@ -42,7 +42,7 @@ function Groups() {
   const onHandleConfirm = () => {
     axios
       .post(
-        `https://capstone-bulk-email-tool-backend-4.onrender.com/api/v1/user/deletegroup/${groupId}`
+        `https://bulk-email-tool-backend-v04p.onrender.com/api/v1/user/deletegroup/${groupId}`
       )
       .then((res) => {
         console.log("successfully deleted");
@@ -68,7 +68,7 @@ function Groups() {
     };
     axios
       .get(
-        "https://capstone-bulk-email-tool-backend-4.onrender.com/api/v1/user/viewgroups",
+        "https://bulk-email-tool-backend-v04p.onrender.com/api/v1/user/viewgroups",
         config
       )
       .then((res) => {
