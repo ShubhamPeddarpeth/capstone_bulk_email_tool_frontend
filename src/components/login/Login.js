@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
-import { Link, Navigate, useNavigate } from "react-router-dom";
-import axios from "axios";
-import { signin, saveToken } from "../../auth/auth";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { signin } from "../../auth/auth";
 
 import "./login.css";
 
@@ -17,7 +16,7 @@ function Login() {
       if (res.valid === true && res.status === 200) {
         setIncorrect(false);
         navigate("/");
-      } 
+      }
     } catch (error) {
       if (error.response && error.response.status === 409) {
         console.log("User already exists. Please login.");
